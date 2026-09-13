@@ -1,0 +1,53 @@
+# World Configuration
+world:
+  width: 100
+  height: 100
+  time_scale: 1.0
+  max_steps: 10000
+
+# Agent Configuration
+agents:
+  total_count: 100
+  types:
+    worker:
+      count: 40
+      energy: 100
+      speed: 0.5
+    trader:
+      count: 20
+      energy: 120
+      speed: 0.7
+    explorer:
+      count: 15
+      energy: 150
+      speed: 1.0
+    learner:
+      count: 15
+      energy: 100
+      speed: 0.3
+    social:
+      count: 10
+      energy: 110
+      speed: 0.6
+
+# Learning Configuration
+learning:
+  enabled: true
+  algorithm: "q-learning"
+  learning_rate: 0.1
+  discount_factor: 0.95
+  epsilon: 0.1
+
+# Economic Configuration
+economics:
+  enabled: true
+  initial_capital: 1000
+  market_volatility: 0.05
+  trade_tax: 0.02
+
+# Visualization
+visualization:
+  enabled: true
+  resolution: [1280, 720]
+  fps: 30
+  agent_size: 5
